@@ -30,7 +30,7 @@ export function Hero() {
 
         {/* Hero title */}
         <h1 className="font-display leading-[0.82] tracking-tight">
-          <span className="block text-[clamp(4rem,12vw,11rem)] text-secondary uppercase">VCT Ribeirão</span>
+          <span className="block text-[clamp(4rem,12vw,11rem)] text-secondary uppercase">VCT RP</span>
           <span className="block text-[clamp(4rem,12vw,11rem)] uppercase text-stroke-primary mt-[-0.05em]">
             SÉRIE A
           </span>
