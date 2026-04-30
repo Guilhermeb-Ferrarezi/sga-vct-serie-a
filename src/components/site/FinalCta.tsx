@@ -25,7 +25,9 @@ export function FinalCta() {
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
           <button
             type="button"
-            onClick={openModal}
+            onClick={() => {
+              openModal();
+            }}
             className="group relative inline-flex items-center gap-3 bg-primary text-primary-foreground font-display uppercase tracking-wider text-lg px-8 py-4 rounded-sm transition-transform hover:-translate-y-0.5"
             style={{ boxShadow: "var(--shadow-red-strong)", clipPath: "polygon(0 0, 100% 0, 96% 100%, 0% 100%)" }}
           >

@@ -16,7 +16,7 @@ export function SignupModal({ open, onOpenChange }: Props) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-lg border-primary/30 bg-card">
+      <DialogContent forceMount className="z-[1000] max-w-lg border-primary/30 bg-card">
         <DialogHeader>
           <DialogTitle className="font-display text-3xl md:text-4xl uppercase text-secondary leading-tight">
             Como você vai <span className="text-primary">participar?</span>

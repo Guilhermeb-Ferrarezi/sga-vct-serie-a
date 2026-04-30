@@ -25,7 +25,9 @@ export function Header() {
         </nav>
         <button
           type="button"
-          onClick={openModal}
+          onClick={() => {
+            openModal();
+          }}
           className="rounded-full border border-white/15 bg-black/40 backdrop-blur-md px-5 py-2.5 font-mono-tag text-[11px] uppercase tracking-[0.18em] text-foreground hover:border-primary hover:text-primary transition-colors"
         >
           WhatsApp
