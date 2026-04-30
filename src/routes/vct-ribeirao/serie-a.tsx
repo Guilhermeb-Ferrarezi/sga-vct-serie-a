@@ -12,6 +12,11 @@ import { Footer } from "@/components/site/Footer";
 import { SignupModal } from "@/components/site/SignupModal";
 
 export const Route = createFileRoute("/vct-ribeirao/serie-a")({
+  headers: () => ({
+    "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+    Pragma: "no-cache",
+    Expires: "0",
+  }),
   head: () => ({
     meta: [
       { title: "VCT Ribeirão — Série A | Santos Games" },
