@@ -1,0 +1,117 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Anton", "Bebas Neue", system-ui, sans-serif;
+  --font-condensed: "Bebas Neue", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-diamond: hsl(var(--diamond));
+  --color-ascendant: hsl(var(--ascendant));
+  --color-immortal: hsl(var(--immortal));
+  --color-radiant: hsl(var(--radiant));
+}
+
+:root {
+  --radius: 0.25rem;
+  --background: 220 30% 6%;
+  --foreground: 40 20% 96%;
+  --card: 220 28% 9%;
+  --card-foreground: 40 20% 96%;
+  --popover: 220 30% 6%;
+  --popover-foreground: 40 20% 96%;
+  --primary: 356 78% 56%;
+  --primary-foreground: 40 30% 98%;
+  --secondary: 40 30% 94%;
+  --secondary-foreground: 220 30% 6%;
+  --muted: 220 20% 14%;
+  --muted-foreground: 220 10% 65%;
+  --accent: 356 78% 56%;
+  --accent-foreground: 40 30% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 40 30% 98%;
+  --border: 220 20% 16%;
+  --input: 220 20% 16%;
+  --ring: 356 78% 56%;
+
+  /* Tier colors (Série A: Diamante 3 → Radiante) */
+  --diamond: 195 75% 60%;
+  --ascendant: 155 55% 50%;
+  --immortal: 320 60% 55%;
+  --radiant: 48 95% 65%;
+
+  --gradient-hero: linear-gradient(180deg, hsl(220 35% 4% / 0) 0%, hsl(220 35% 4% / 0.4) 40%, hsl(220 35% 4%) 100%);
+  --gradient-radial-red: radial-gradient(circle at 50% 50%, hsl(356 78% 56% / 0.25), transparent 70%);
+  --gradient-red: linear-gradient(135deg, hsl(356 78% 56%), hsl(348 85% 48%));
+  --gradient-tier-b: linear-gradient(135deg, hsl(195 75% 60%), hsl(320 60% 55%), hsl(48 95% 65%));
+
+  --shadow-card: 0 20px 60px -10px hsl(220 35% 2% / 0.8);
+  --shadow-red: 0 0 40px hsl(356 78% 56% / 0.4);
+  --shadow-red-strong: 0 0 80px hsl(356 100% 65% / 0.5), 0 0 20px hsl(356 78% 56% / 0.6);
+  --shadow-radiant: 0 0 40px hsl(48 95% 65% / 0.45);
+
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  * { border-color: hsl(var(--border)); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@utility font-display { font-family: var(--font-display); }
+@utility font-condensed { font-family: var(--font-condensed); }
+@utility font-mono-tag { font-family: var(--font-mono); }
+
+@utility text-stroke-primary {
+  -webkit-text-stroke: 2px hsl(var(--primary));
+  color: transparent;
+}
+
+@utility hero-grid-bg {
+  background-image:
+    linear-gradient(hsl(var(--foreground) / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--foreground) / 0.04) 1px, transparent 1px);
+  background-size: 80px 100%, 33.333% 100%;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@utility animate-marquee {
+  animation: marquee 40s linear infinite;
+}
