@@ -6,6 +6,20 @@ const { default: app } = await import("./dist/server/server.js");
 
 const assetRoots = [path.resolve("./dist/client/assets"), path.resolve("./dist/server/assets")];
 
+function contentType(filePath: string) {
+  const ext = path.extname(filePath).toLowerCase();
+  if (ext === ".css") return "text/css; charset=utf-8";
+  if (ext === ".js" || ext === ".mjs") return "text/javascript; charset=utf-8";
+  if (ext === ".png") return "image/png";
+  if (ext === ".jpg" || ext === ".jpeg") return "image/jpeg";
+  if (ext === ".webp") return "image/webp";
+  if (ext === ".svg") return "image/svg+xml";
+  if (ext === ".woff") return "font/woff";
+  if (ext === ".woff2") return "font/woff2";
+  if (ext === ".json") return "application/json; charset=utf-8";
+  return "application/octet-stream";
+}
+
 async function findAsset(assetPath: string) {
   for (const root of assetRoots) {
     const filePath = path.join(root, assetPath);
@@ -30,7 +44,12 @@ Bun.serve({
       const filePath = await findAsset(assetPath);
 
       if (filePath) {
-        return new Response(Bun.file(filePath));
+        return new Response(Bun.file(filePath), {
+          headers: {
+            "Content-Type": contentType(filePath),
+            "Cache-Control": "public, max-age=31536000, immutable",
+          },
+        });
       }
     }
 

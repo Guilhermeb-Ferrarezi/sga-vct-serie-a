@@ -42,7 +42,7 @@ export const Route = createRootRoute({
         content: "Campeonato presencial de Valorant em Ribeirão Preto. Diamante 3 a Radiante.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://santos.games/vct-ribeirao/serie-a" },
+      { property: "og:url", content: "https://santos-games.com/vct-ribeirao/serie-a" },
       { name: "twitter:card", content: "summary" },
     ],
     links: [
@@ -56,7 +56,7 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap",
       },
-      { rel: "canonical", href: "https://santos.games/vct-ribeirao/serie-a" },
+      { rel: "canonical", href: "https://santos-games.com/vct-ribeirao/serie-a" },
     ],
   }),
   shellComponent: RootShell,
