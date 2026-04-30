@@ -1,8 +1,10 @@
 import capa from "@/assets/capa01.png?inline";
 import { SignupModal, useSignupModal } from "./SignupModal";
 
+const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=5516991069776&text=Ol%C3%A1%21%20Quero%20me%20inscrever%20no%20VCT%20Ribeir%C3%A3o%20%E2%80%94%20S%C3%A9rie%20A.";
+
 export function FinalCta() {
-  const { open, setOpen, openModal } = useSignupModal();
+  const { open, setOpen } = useSignupModal();
   return (
     <section id="vaga" className="relative py-32 px-6 md:px-10 overflow-hidden">
       <div className="absolute inset-0">
@@ -23,12 +25,16 @@ export function FinalCta() {
           Garanta sua vaga antes que feche.
         </p>
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
-          <button type="button" onClick={openModal}
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
             className="group relative inline-flex items-center gap-3 bg-primary text-primary-foreground font-display uppercase tracking-wider text-lg px-8 py-4 rounded-sm transition-transform hover:-translate-y-0.5"
-            style={{ boxShadow: "var(--shadow-red-strong)", clipPath: "polygon(0 0, 100% 0, 96% 100%, 0% 100%)" }}>
+            style={{ boxShadow: "var(--shadow-red-strong)", clipPath: "polygon(0 0, 100% 0, 96% 100%, 0% 100%)" }}
+          >
             Garantir minha vaga
             <span className="transition-transform group-hover:translate-x-1">→</span>
-          </button>
+          </a>
           <a href="#faq" className="font-mono-tag text-[11px] uppercase tracking-[0.25em] text-foreground/80 hover:text-primary transition-colors">
             Tenho dúvidas →
           </a>

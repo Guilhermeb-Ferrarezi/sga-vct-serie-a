@@ -12,7 +12,7 @@ type Props = {
 
 export function SignupModal({ open, onOpenChange }: Props) {
   const link = (msg: string) =>
-    `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
+    `https://api.whatsapp.com/send?phone=${PHONE}&text=${encodeURIComponent(msg)}`;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
