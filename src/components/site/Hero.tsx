@@ -1,4 +1,4 @@
-import capa from "@/assets/capa01.png";
+import capa from "@/assets/capa01.png?inline";
 
 const tiers = [
   { name: "Diamante 3", color: "from-cyan-400 to-sky-600", text: "text-cyan-100" },

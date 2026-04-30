@@ -1,4 +1,4 @@
-import logo from "@/assets/sga-logo.png";
+import logo from "@/assets/sga-logo.png?inline";
 export function Footer() {
   return (
     <footer className="border-t border-white/10 py-10 px-6 md:px-10">

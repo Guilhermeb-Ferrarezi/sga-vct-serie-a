@@ -1,4 +1,4 @@
-import capa from "@/assets/capa01.png";
+import capa from "@/assets/capa01.png?inline";
 import { SignupModal, useSignupModal } from "./SignupModal";
 
 export function FinalCta() {

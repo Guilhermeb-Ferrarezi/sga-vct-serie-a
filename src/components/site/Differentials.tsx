@@ -1,9 +1,9 @@
-import card1 from "@/assets/card_05.png";
-import card2 from "@/assets/card_03.png";
-import card3 from "@/assets/card_01.png";
-import card4 from "@/assets/card_06.png";
-import card5 from "@/assets/card_04.png";
-import card6 from "@/assets/card_02.png";
+import card1 from "@/assets/card_05.png?inline";
+import card2 from "@/assets/card_03.png?inline";
+import card3 from "@/assets/card_01.png?inline";
+import card4 from "@/assets/card_06.png?inline";
+import card5 from "@/assets/card_04.png?inline";
+import card6 from "@/assets/card_02.png?inline";
 
 const items = [
   { n: "01", img: card1, title: "100% Presencial", text: "Aqui não é online. É competição real, frente a frente." },
