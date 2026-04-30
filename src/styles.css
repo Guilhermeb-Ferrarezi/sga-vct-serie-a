@@ -128,3 +128,15 @@
   visibility: visible;
   pointer-events: auto;
 }
+
+details.faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.faq-item > summary {
+  list-style: none;
+}
+
+details.faq-item[open] .faq-chevron {
+  transform: rotate(180deg);
+}
