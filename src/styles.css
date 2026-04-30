@@ -115,3 +115,16 @@
 @utility animate-marquee {
   animation: marquee 40s linear infinite;
 }
+
+#signup-modal {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 200ms ease, visibility 200ms ease;
+}
+
+#signup-modal:target {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}

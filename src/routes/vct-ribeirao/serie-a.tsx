@@ -9,6 +9,7 @@ import { Recognitions } from "@/components/site/Recognitions";
 import { Faq } from "@/components/site/Faq";
 import { FinalCta } from "@/components/site/FinalCta";
 import { Footer } from "@/components/site/Footer";
+import { SignupModal } from "@/components/site/SignupModal";
 
 export const Route = createFileRoute("/vct-ribeirao/serie-a")({
   head: () => ({
@@ -40,6 +41,7 @@ function SeriesAPage() {
       <Faq />
       <FinalCta />
       <Footer />
+      <SignupModal />
     </main>
   );
 }

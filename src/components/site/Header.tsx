@@ -1,9 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import logo from "@/assets/sga-logo.png?inline";
-import { SignupModal, useSignupModal } from "./SignupModal";
+import { SignupModal } from "./SignupModal";
 
 export function Header() {
-  const { open, setOpen, openModal } = useSignupModal();
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-6 md:px-10 pt-5">
       <div className="mx-auto flex max-w-[1600px] items-center justify-between">
@@ -23,17 +22,13 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <button
-          type="button"
-          onClick={() => {
-            openModal();
-          }}
+        <a
+          href="#signup-modal"
           className="rounded-full border border-white/15 bg-black/40 backdrop-blur-md px-5 py-2.5 font-mono-tag text-[11px] uppercase tracking-[0.18em] text-foreground hover:border-primary hover:text-primary transition-colors"
         >
           WhatsApp
-        </button>
+        </a>
       </div>
-      <SignupModal open={open} onOpenChange={setOpen} />
     </header>
   );
 }

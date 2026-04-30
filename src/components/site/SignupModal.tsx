@@ -1,37 +1,46 @@
-import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-
 const PHONE = "5516991069776";
 const MSG_TEAM = "Olá! Quero inscrever meu time no VCT Ribeirão — Série A.";
 const MSG_HELP = "Olá! Quero participar do VCT Ribeirão — Série A, mas preciso de ajuda para montar um time.";
 
-type Props = {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-};
+const link = (msg: string) =>
+  `https://api.whatsapp.com/send?phone=${PHONE}&text=${encodeURIComponent(msg)}`;
 
-export function SignupModal({ open, onOpenChange }: Props) {
-  const link = (msg: string) =>
-    `https://api.whatsapp.com/send?phone=${PHONE}&text=${encodeURIComponent(msg)}`;
-
+export function SignupModal() {
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent forceMount className="z-[1000] max-w-lg border-primary/30 bg-card">
-        <DialogHeader>
-          <DialogTitle className="font-display text-3xl md:text-4xl uppercase text-secondary leading-tight">
+    <div
+      id="signup-modal"
+      aria-hidden="true"
+      className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/80 px-4"
+    >
+      <a
+        href="#"
+        aria-label="Fechar modal"
+        className="absolute inset-0 cursor-default"
+      />
+
+      <div className="relative w-full max-w-lg border border-primary/30 bg-card p-6 shadow-2xl">
+        <a
+          href="#"
+          aria-label="Fechar modal"
+          className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100"
+        >
+          <span className="text-2xl leading-none text-foreground">×</span>
+        </a>
+
+        <div className="flex flex-col space-y-1.5 text-center sm:text-left">
+          <h2 className="font-display text-3xl md:text-4xl uppercase text-secondary leading-tight">
             Como você vai <span className="text-primary">participar?</span>
-          </DialogTitle>
-          <DialogDescription className="text-muted-foreground">
+          </h2>
+          <p className="text-sm text-muted-foreground">
             Escolha uma opção pra continuar no WhatsApp.
-          </DialogDescription>
-        </DialogHeader>
+          </p>
+        </div>
 
         <div className="mt-4 grid gap-3">
           <a
             href={link(MSG_TEAM)}
             target="_blank"
             rel="noreferrer"
-            onClick={() => onOpenChange(false)}
             className="group rounded-sm border border-white/10 bg-background/60 p-5 transition-all hover:border-primary/50 hover:-translate-y-0.5"
           >
             <p className="font-mono-tag text-[10px] uppercase tracking-[0.25em] text-primary mb-2">
@@ -52,7 +61,6 @@ export function SignupModal({ open, onOpenChange }: Props) {
             href={link(MSG_HELP)}
             target="_blank"
             rel="noreferrer"
-            onClick={() => onOpenChange(false)}
             className="group rounded-sm border border-white/10 bg-background/60 p-5 transition-all hover:border-primary/50 hover:-translate-y-0.5"
           >
             <p className="font-mono-tag text-[10px] uppercase tracking-[0.25em] text-primary mb-2">
@@ -69,12 +77,7 @@ export function SignupModal({ open, onOpenChange }: Props) {
             </span>
           </a>
         </div>
-      </DialogContent>
-    </Dialog>
+      </div>
+    </div>
   );
-}
-
-export function useSignupModal() {
-  const [open, setOpen] = useState(false);
-  return { open, setOpen, openModal: () => setOpen(true) };
 }
