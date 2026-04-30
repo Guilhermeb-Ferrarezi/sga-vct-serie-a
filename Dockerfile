@@ -14,6 +14,9 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
 
+COPY package.json bun.lockb ./
+RUN bun install --frozen-lockfile --production
+
 COPY --from=build /app/dist ./dist
 COPY server.ts ./server.ts
 
