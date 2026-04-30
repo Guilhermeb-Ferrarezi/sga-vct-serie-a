@@ -12,7 +12,7 @@ export function Hero() {
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={capa} alt="Jogadores competindo no VCT Ribeirão" className="h-full w-full object-cover" />
+        <img src={capa} alt="Jogadores competindo no VCT RP" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-background/55" />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="absolute inset-0 hero-grid-bg" />
