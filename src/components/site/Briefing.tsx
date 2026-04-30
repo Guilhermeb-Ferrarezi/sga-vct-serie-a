@@ -4,7 +4,7 @@ const rows = [
   { label: "Formato", main: "5v5 — 4 times", sub: "Chave superior e inferior (eliminação dupla)" },
   { label: "Elegibilidade", main: "Diamante 3 a Radiante", sub: "Diamante 2 ou abaixo não joga. Máximo 1 Radiante por time." },
   { label: "Inscrição", main: "R$ 79,90", sub: "por competidor" },
-  { label: "Início", main: "08h00", sub: "encerramento entre 21h e 22h" },
+  { label: "Início", main: "08h00", sub: "" },
 ];
 
 const incluso = [
