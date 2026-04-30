@@ -1,5 +1,5 @@
 const rows = [
-  { label: "Data", main: "31/05/2026", sub: "" },
+  { label: "Data", main: "24/05/2026", sub: "" },
   { label: "Local", main: "Av. Nove de Julho, 1992", sub: "Ribeirão Preto" },
   { label: "Formato", main: "5v5 — 4 times", sub: "Chave superior e inferior (eliminação dupla)" },
   { label: "Elegibilidade", main: "Diamante 3 a Radiante", sub: "Diamante 2 ou abaixo não joga. Máximo 1 Radiante por time." },

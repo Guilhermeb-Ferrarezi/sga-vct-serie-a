@@ -4,7 +4,7 @@ export function Marquee() {
       <span className="text-primary">★</span> Série A
       <span className="text-muted-foreground">Diamante 3 · Ascendente · Imortal · Radiante</span>
       <span className="text-primary">★</span> 4 times
-      <span className="text-muted-foreground">31/05/2026</span>
+      <span className="text-muted-foreground">24/05/2026</span>
       <span className="text-primary">★</span> Presencial
       <span className="text-muted-foreground">Ribeirão Preto</span>
     </span>

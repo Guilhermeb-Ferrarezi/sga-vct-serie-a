@@ -37,7 +37,7 @@ export function FinalCta() {
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4 font-mono-tag text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
           <span>R$ 79,90 / pessoa</span>
           <span className="text-primary">●</span>
-          <span>31/05/2026</span>
+          <span>24/05/2026</span>
           <span className="text-primary">●</span>
           <span>Ribeirão Preto</span>
         </div>

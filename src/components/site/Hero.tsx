@@ -60,7 +60,7 @@ export function Hero() {
         <div className="mt-auto pt-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-8">
             {[
-              { label: "Data", value: "31/05", accent: false },
+              { label: "Data", value: "24/05", accent: false },
               { label: "Times", value: "04", accent: true },
               { label: "Formato", value: "5v5", accent: false },
               { label: "Local", value: "Ribeirão Preto", accent: false },
