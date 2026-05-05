@@ -1,7 +1,7 @@
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
-  { q: "Quem pode participar dessa edição?", a: "Apenas jogadores entre Diamante 3 e Radiante. Diamante 1, Diamante 2 ou abaixo não podem participar. Cada time pode ter no máximo 1 Radiante." },
+  { q: "Quem pode participar dessa edição?", a: "Apenas jogadores entre Diamante 3 e Radiante. Diamante 1, Diamante 2 ou abaixo não podem participar." },
   { q: "Como funciona o formato do campeonato?", a: "5v5, 4 times, com chave superior e inferior em eliminação dupla. Tudo presencial." },
   { q: "Como faço minha inscrição?", a: "Pelo botão Garantir minha vaga ou pelo nosso WhatsApp. A vaga é confirmada após pagamento e verificação do elo." },
   { q: "Posso participar mesmo sem time fechado?", a: "Sim. Te ajudamos a encontrar time entre os inscritos antes do campeonato." },

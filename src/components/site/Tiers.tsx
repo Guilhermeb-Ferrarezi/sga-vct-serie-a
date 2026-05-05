@@ -2,7 +2,7 @@ const tiers = [
   { num: "01", name: "Diamond", desc: "Apenas Diamante 3 pode jogar. Diamante 1 e 2 não participam.", color: "var(--diamond)" },
   { num: "02", name: "Ascendant", desc: "Ascendente 1, 2 e 3 podem jogar.", color: "var(--ascendant)" },
   { num: "03", name: "Immortal", desc: "Imortal 1, 2 e 3 podem jogar.", color: "var(--immortal)" },
-  { num: "04", name: "Radiant", desc: "Radiante pode jogar. Limite de 1 Radiante por time.", color: "var(--radiant)" },
+  { num: "04", name: "Radiant", desc: "Radiante pode jogar.", color: "var(--radiant)" },
 ];
 
 export function Tiers() {
@@ -17,8 +17,7 @@ export function Tiers() {
           Série A <span className="text-muted-foreground">(Avançado)</span>
         </h2>
         <p className="max-w-3xl text-muted-foreground mb-16">
-          A Série A é para jogadores avançados. Permitidos do Diamante 3 até Radiante,
-          com limite de <span className="text-foreground">1 jogador Radiante por time</span> para manter o equilíbrio.
+          A Série A é para jogadores avançados. Permitidos do Diamante 3 até Radiante.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -39,7 +38,7 @@ export function Tiers() {
           {[
             { label: "Quem pode jogar", text: "Diamante 3, Ascendente 1-3, Imortal 1-3 e Radiante." },
             { label: "Quem não pode jogar", text: "Diamante 1, Diamante 2 ou qualquer elo abaixo." },
-            { label: "Regra importante", text: "Cada time pode ter no máximo 1 jogador Radiante." },
+            { label: "Elo permitido", text: "Radiante." },
           ].map((b) => (
             <div key={b.label} className="rounded-sm border border-primary/30 bg-primary/5 p-6">
               <p className="font-mono-tag text-[10px] uppercase tracking-[0.25em] text-primary mb-2">{b.label}</p>
