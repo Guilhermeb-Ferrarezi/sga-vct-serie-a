@@ -34,11 +34,10 @@ export function Tiers() {
           ))}
         </div>
 
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
+        <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-4xl">
           {[
             { label: "Quem pode jogar", text: "Diamante 3, Ascendente 1-3, Imortal 1-3 e Radiante." },
             { label: "Quem não pode jogar", text: "Diamante 1, Diamante 2 ou qualquer elo abaixo." },
-            { label: "Elo permitido", text: "Radiante." },
           ].map((b) => (
             <div key={b.label} className="rounded-sm border border-primary/30 bg-primary/5 p-6">
               <p className="font-mono-tag text-[10px] uppercase tracking-[0.25em] text-primary mb-2">{b.label}</p>
