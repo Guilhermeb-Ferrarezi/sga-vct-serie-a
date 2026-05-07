@@ -31,6 +31,7 @@ export const Route = createFileRoute("/vct-ribeirao/serie-a")({
       { property: "og:description", content: "Diamante 3 a Radiante. 24/05/2026. Ribeirão Preto." },
       { property: "og:image", content: ogImage },
       { property: "og:image:alt", content: "Jogadores competindo no VCT RP" },
+      { property: "og:type", content: "website" },
       { property: "og:url", content: "https://santos-games.com/vct-ribeirao/serie-a" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: ogImage },
