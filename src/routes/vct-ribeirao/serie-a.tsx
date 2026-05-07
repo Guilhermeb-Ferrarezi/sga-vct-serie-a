@@ -11,7 +11,7 @@ import { FinalCta } from "@/components/site/FinalCta";
 import { Footer } from "@/components/site/Footer";
 import { SignupModal } from "@/components/site/SignupModal";
 
-const ogImage = `${import.meta.env.BASE_URL}vct-serie-a.jpg`;
+const ogImage = "https://santos-games.com/vct-ribeirao/serie-a/vct-serie-a.jpg";
 
 export const Route = createFileRoute("/vct-ribeirao/serie-a")({
   headers: () => ({
