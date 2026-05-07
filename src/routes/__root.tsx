@@ -1,6 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?inline";
+const ogImage = `${import.meta.env.BASE_URL}vct-serie-a.png`;
 
 function NotFoundComponent() {
   return (
@@ -46,9 +47,12 @@ export const Route = createRootRoute({
         property: "og:description",
         content: "Campeonato presencial de Valorant em Ribeirão Preto. Diamante 3 a Radiante.",
       },
+      { property: "og:image", content: ogImage },
+      { property: "og:image:alt", content: "Jogadores competindo no VCT RP" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://santos-games.com/vct-ribeirao/serie-a" },
-      { name: "twitter:card", content: "summary" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: ogImage },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },

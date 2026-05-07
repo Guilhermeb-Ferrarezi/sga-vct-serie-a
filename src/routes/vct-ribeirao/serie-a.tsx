@@ -11,6 +11,8 @@ import { FinalCta } from "@/components/site/FinalCta";
 import { Footer } from "@/components/site/Footer";
 import { SignupModal } from "@/components/site/SignupModal";
 
+const ogImage = `${import.meta.env.BASE_URL}vct-serie-a.png`;
+
 export const Route = createFileRoute("/vct-ribeirao/serie-a")({
   headers: () => ({
     "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
@@ -27,7 +29,11 @@ export const Route = createFileRoute("/vct-ribeirao/serie-a")({
       },
       { property: "og:title", content: "VCT Ribeirão — Série A" },
       { property: "og:description", content: "Diamante 3 a Radiante. 24/05/2026. Ribeirão Preto." },
+      { property: "og:image", content: ogImage },
+      { property: "og:image:alt", content: "Jogadores competindo no VCT RP" },
       { property: "og:url", content: "https://santos-games.com/vct-ribeirao/serie-a" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: ogImage },
     ],
   }),
   component: SeriesAPage,
