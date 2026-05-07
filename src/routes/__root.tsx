@@ -2,7 +2,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 
 import appCss from "../styles.css?inline";
 
-const ogImage = "https://santos-games.com/vct-ribeirao/serie-a/vct-serie-a.jpg";
+const ogImage = "https://cdn.santos-games.com/landing/hero/vct-serie-a.jpg";
 
 function NotFoundComponent() {
   return (
