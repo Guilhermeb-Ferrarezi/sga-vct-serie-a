@@ -1,7 +1,9 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?inline";
-const ogImage = "https://santos-games.com/vct-ribeirao/serie-a/vct-serie-a.jpg";
+import ogImagePath from "@/assets/capa01.png?url";
+
+const ogImage = new URL(ogImagePath, "https://santos-games.com").toString();
 
 function NotFoundComponent() {
   return (

@@ -10,8 +10,9 @@ import { Faq } from "@/components/site/Faq";
 import { FinalCta } from "@/components/site/FinalCta";
 import { Footer } from "@/components/site/Footer";
 import { SignupModal } from "@/components/site/SignupModal";
+import ogImagePath from "@/assets/capa01.png?url";
 
-const ogImage = "https://santos-games.com/vct-ribeirao/serie-a/vct-serie-a.jpg";
+const ogImage = new URL(ogImagePath, "https://santos-games.com").toString();
 
 export const Route = createFileRoute("/vct-ribeirao/serie-a")({
   headers: () => ({
